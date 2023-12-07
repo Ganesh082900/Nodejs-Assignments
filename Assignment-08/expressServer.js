@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // provide the mangoDB password/link to connect to the DB
-mongoose.connect("mongodb+srv://ganeshpendyala2000:<<Provide.Password>>.cyzikyo.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect(process.env)
     .then((response) => {
         console.log("Connected to DB successfully ! ")
     }).catch((error) => {
